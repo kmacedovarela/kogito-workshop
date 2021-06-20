@@ -7,21 +7,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: wksp-pam-dmn
-  name: wksp-pam-dmn
+    app: wksp-kogito-decision
+  name: wksp-kogito-decision
   namespace: bu-wksp-kogito
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wksp-pam-dmn
+      app: wksp-kogito-decision
   template:
     metadata:
       labels:
-        app: wksp-pam-dmn
+        app: wksp-kogito-decision
     spec:
       containers:
-      - name: wksp-pam-dmn-service
+      - name: wksp-kogito-decision-service
         image: quay.io/osevg/workshopper:latest
         imagePullPolicy: Always
         ports:
@@ -37,27 +37,27 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: wksp-pam-dmn-service
+  name: wksp-kogito-decision-service
   namespace: bu-wksp-kogito
   labels:
-    app: wksp-pam-dmn-service
+    app: wksp-kogito-decision-service
 spec:
   ports:
   - name: http
     port: 8080
   selector:
-    app: wksp-pam-dmn
+    app: wksp-kogito-decision
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-    name: wksp-pam-dmn-route
+    name: wksp-kogito-decision-route
     namespace: bu-wksp-kogito
     labels:
-      app: wksp-pam-dmn
+      app: wksp-kogito-decision
 spec:
   port:
     targetPort: http
   to:
       kind: Service
-      name: wksp-pam-dmn-service
+      name: wksp-kogito-decision-service
