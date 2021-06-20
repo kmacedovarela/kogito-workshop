@@ -1,0 +1,14 @@
+---
+id: "kogito_workshop"
+name: "Cloud Native Decision Automation Workshop"
+
+content:
+  url: https://raw.githubusercontent.com/kmacedovarela/pam-kogito-workshop.git/master
+
+modules:
+  activate:
+  - introduction
+  - environment-setup
+  - kafka-environment  
+  - getting-started-kogito
+  - event-driven-decision-services
