@@ -18,7 +18,7 @@ $ mvn archetype:generate \
 -DarchetypeGroupId=org.kie.kogito \
 -DarchetypeArtifactId=kogito-quarkus-dm-archetype \
 -DgroupId=org.acme -DartifactId=decision-lab01 \
--DarchetypeVersion=1.5.0.redhat-00002 \
+-DarchetypeVersion=1.5.0.redhat-00004 \
 -Dversion=1.0-SNAPSHOT
 ```
 
