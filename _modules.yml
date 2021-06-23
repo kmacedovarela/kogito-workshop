@@ -12,3 +12,5 @@ modules:
     name: Getting Started with Decision Services
   event-driven-decision-services:
     name: Event Driven Decision Services
+  kogito-rules:
+    name: Implementing Business Rules 

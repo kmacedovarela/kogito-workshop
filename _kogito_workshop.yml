@@ -12,3 +12,4 @@ modules:
   - kafka-environment  
   - getting-started-kogito
   - event-driven-decision-services
+  - kogito-rules
