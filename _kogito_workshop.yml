@@ -9,7 +9,7 @@ modules:
   activate:
   - introduction
   - environment-setup
+  - build-decision-service
   - kafka-environment  
-  - getting-started-kogito
   - event-driven-decision-services
   - kogito-rules

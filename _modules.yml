@@ -6,10 +6,10 @@ modules:
     name: Introduction
   environment-setup:
     name: Environment Setup
+  build-decision-service:
+    name: Build a Decision Service
   kafka-environment:
     name: Kafka Environment Setup    
-  getting-started-kogito:
-    name: Getting Started with Decision Services
   event-driven-decision-services:
     name: Event Driven Decision Services
   kogito-rules:
