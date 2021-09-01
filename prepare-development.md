@@ -1,6 +1,6 @@
-# 2. Prepare your development environment
+# 2. Prepare your Development Environment
 
-In this step you will prepare the environment that you wil use throughout the rest of the modules. You will:
+In this step you will prepare the environment that you will use throughout the rest of the modules. You will:
 
 -   Create a base folder to be used during the enablement labs;
 -   Install Visual Studio Code IDE;

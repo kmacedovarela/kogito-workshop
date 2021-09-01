@@ -8,7 +8,7 @@ content:
 modules:
   activate:
   - introduction
-  - environment-setup
+  - prepare-development
   - build-decision-service
   - kafka-environment  
   - event-driven-decision-services

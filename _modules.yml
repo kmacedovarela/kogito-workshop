@@ -4,8 +4,8 @@ config:
 modules:
   introduction:
     name: Introduction
-  environment-setup:
-    name: Environment Setup
+  prepare-development:
+    name: Prepare your Development Environment
   build-decision-service:
     name: Build a Decision Service
   kafka-environment:
