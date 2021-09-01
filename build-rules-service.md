@@ -1,14 +1,14 @@
-# 6. Business Rules with Kogito DRL
+# 7. Business Rules with Kogito DRL
 
 Kogito is Cloud Native Business Automation. Business Automation covers the application area of business processes, workflows, decisions, rules and optimization. Kogito brings these capabilities to the Cloud Native world by utilizing the latest innovations in the Java landscape, like \[Quarkus\](<https://quarkus.io>) and \[GraalVM\](<https://graalvm.org>), while building on battle-tested components.
 
-## 6.1. Goals of this Lab
+## 7.1. Goals of this Lab
 
 -   Implement (business) rules in Kogito using RuleUnits.
 
 -   Execute in you local environment.
 
-## 6.2. Prerequisites
+## 7.2. Prerequisites
 
 -   Visual Studio Code
 
@@ -21,7 +21,7 @@ Kogito is Cloud Native Business Automation. Business Automation covers the appli
 -   cURL (or another client/tool with which RESTful requests can be sent to the Kogito application)
 
 
-## 6.3. Creating a rules Kogito project
+## 7.3. Creating a rules Kogito project
 
 In this step, you will create a Kogito application skeleton.
 
@@ -56,7 +56,7 @@ The default Kogito application created from the archetype contains a sample proc
 ![]({%  image_path/kogito-vscode-delete-test-dmn.png %}){:width="650px"}
 
 
-## 6.4. Running the Application
+## 7.4. Running the Application
 
 We will now run the Kogito application in development mode. This allows us to keep the application running while implementing our application logic. Kogito and Quarkus will *hot reload* the application when it is accessed and changes have been detected.
 
@@ -78,13 +78,13 @@ It’s working!
 
 You can now stop the application with `CTRL-C`.
 
-## 6.5 Let's increment our application
+## 7.5 Let's increment our application
 
 You’ve seen how to create the skeleton of basic Kogito app, and start the application in *Quarkus dev-mode*.
 
 In the previous step we’ve created a skeleton Kogito application with Quarkus and started the application in *Quarkus dev-mode*. In this step we create the domain model of our application.
 
-## 6.6. Working with Facts
+## 7.6. Working with Facts
 
 A (business) rules and/or decision service operates on entities called *facts*. *Facts* is data over which a rules engine reasons and to which it applies its constraints. In Kogito, facts are implemented as POJOs (Plain Old Java Objects).
 
@@ -94,7 +94,7 @@ From this description of our application, we can infer the *fact*:
 
 -   Person: which has a name, an age, and a boolean that states whether he/she is an adult.
 
-### 6.6.1. Person
+### 7.6.1. Person
 
 We first implement the `Person` class. To do this, we first need to create a new package in our project.
 
@@ -154,7 +154,7 @@ You’ve implemented the domain model of your Kogito business rules project. In 
 
 *Rule Units* are groups of data sources, global variables, and DRL rules that function together for a specific purpose. You can use rule units to partition a rule set into smaller units, bind different data sources to those units, and then execute the individual unit.
 
-### 6.6.2. PersonUnit.
+### 7.6.2. PersonUnit.
 
 We first implement the skeleton of our `PersonUnit` class. To do this, we first create a new `PersonUnit.java` file in the `org.acme` package in `src/main/java`
 
@@ -212,7 +212,7 @@ In this step you’ve implemented your first *Rule Unit*. Well done! In the next
 
 The rules of our rule unit will be implemented in DRL, the Drools Rule Language. DRL is a declarative language in which advanced rules can be defined and implemented, using constructs like rules, functions and queries.
 
-### 6.6.3. PersonUnit DRL
+### 7.6.3. PersonUnit DRL
 
 We first implement the skeleton of our `PersonUnit.drl` file in the `src/main/resources` directory of our project.
 
@@ -272,7 +272,7 @@ $p: /persons;
 
 This completes the initial implementation of our DRL.
 
-## 6.7.  Running the application
+## 7.7.  Running the application
 
 With our domain model, rule unit and rules implemented, we can now start our application. In a terminal, execute the following Maven command.
 
@@ -296,7 +296,7 @@ In this step you’ve implemented your first Kogito rules and queries. You’ve 
 
 Apart from using `DataSources` in our rule units to insert, update and delete facts, we can also define variables in our unit that can be used in our rules. In this use-case we will add an `adultAge` variable to our unit, which allows us to send the age at which a person is considered an adult in our request, and using that age in our rules.
 
-## 6.8 PersonUnit DRL
+## 7.8 PersonUnit DRL
 
 First, we add a new `adultAge` variable to our `PersonUnit` class. Open the `PersonUnit.java` file and add the following code snippet at the `//Add adultAge variable here` comment.
 

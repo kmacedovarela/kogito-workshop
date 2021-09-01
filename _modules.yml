@@ -8,9 +8,11 @@ modules:
     name: Prepare your Development Environment
   build-decision-service:
     name: Build a Decision Service
-  kafka-environment:
-    name: Kafka Environment Setup    
-  event-driven-decision-services:
-    name: Event Driven Decision Services
-  kogito-rules:
-    name: Implementing Business Rules 
+  build-decision-service-logic:
+    name: Build Decision Service Logic
+  run-event-driven-decision-services-1:
+    name: Prepare Event Driven Decision Services    
+  run-event-driven-decision-services-2:
+    name: Run Event Driven Decision Services
+  build-rules-service:
+    name: Build a Rules Service 

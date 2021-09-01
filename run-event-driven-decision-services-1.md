@@ -1,4 +1,4 @@
-# 2.  Kafka Environment
+# 5.  Prepare Event Driven Decision Services
 
 Kafka is an open-source even streaming platform, and currently, one of the most popular tools. In event-driven architectures, the Kafka `topics` are used as the communication layer in between the services. Each service can now be considered a `consumer`or a `producer`, in other words, each service can publish or consume events to/from the `topics`.  
 
@@ -8,11 +8,11 @@ In this step, we will set up a Kafka environment in your local environment using
 
 **IMPORTANT:** When using AMQ Streams (Kafka) in OpenShift, a secure communication is required in between the client applications and the Kafka broker. Extra configurations in the client applications like `kafka.sasl.mechanism`, `kafka.security.protocol`, `kafka.sasl.jaas.config` and `kafka.sasl.login.callback.handler.class` are not needed when TLS communication is not enabled.
 
-## 2.1. Pre requisites
+## 5.1. Pre requisites
 
 * Docker 
 
-## 2.2. Setting up a local Kafka environment using Docker
+## 5.2. Setting up a local Kafka environment using Docker
 
 1. In your local machine, access the enablement's base folder:
 

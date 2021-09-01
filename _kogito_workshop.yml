@@ -10,6 +10,7 @@ modules:
   - introduction
   - prepare-development
   - build-decision-service
-  - kafka-environment  
-  - event-driven-decision-services
-  - kogito-rules
+  - build-decision-service-logic
+  - run-event-driven-decision-services-1
+  - run-event-driven-decision-services-2
+  - build-rules-service

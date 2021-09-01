@@ -1,8 +1,8 @@
-# 4.  Event-driven Decision services
+# 6.  Event-driven Decision services
 
 This lab introduces you to the concept of event-driven decision services. In other words, we'll work with services that can process the decisions based on events that are published to specific topics, and that can publish the decision response also via events. This type of service matches very well the popular event-driven architecture, allowing the business logic to be decoupled and independent of other services.
 
-## 4.1. Creating an event-driven decision project
+## 6.1. Creating an event-driven decision project
 
 Let's create a new project to work with our event-driven decision project. Kogito applications can be created either for Quarkus or SpringBoot runtimes. In this lab, we will use a Maven archetype to generate a Quarkus based project with the required dependencies for our Kogito decision application. 
 
@@ -48,7 +48,7 @@ Let's create a new project to work with our event-driven decision project. Kogit
 
 We now have a decision project with a sample DMN and the required dependencies. 
 
-## 4.2. Configuring the Decision service
+## 6.2. Configuring the Decision service
 
 Instead of creating a middle layer ("glue code") in our app to integrate our decision with Kafka topics, all we need to do is add the respective configurations to the `application.properties` file. In this lab we are using Quarkus, and under the hoods, our decision service will make use of the its Microprofile Reactive Messaging add-on, SmallRye.
 
@@ -81,11 +81,11 @@ About these properties:
   * `connector`: The SmallRye connector we want to use in this streaming resource. 
   * `serializer`/ `deserializer`: Sets the (Kafka) serializer/deserializer to write/read the record’s value.
 
-## 4.3. Kafka Broker
+## 6.3. Kafka Broker
 
 Before testing the service, make sure the Kafka broker is up and running in your local environment. More information can be found on step 2 **Kafka Environment**.
 
-## 4.4. Testing the Decision Service
+## 6.4. Testing the Decision Service
 
 So far, you should have:
 
