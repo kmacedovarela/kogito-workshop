@@ -1,4 +1,4 @@
-# 2. Environment Setup
+# 2. Prepare your development environment
 
 In this step you will prepare the environment that you wil use throughout the rest of the modules. You will:
 
@@ -60,14 +60,17 @@ In VSCode marketplace, you can find the plugins at:
 
 * [Java Support by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java) 
 * [Red Hat Business Automation Bundle](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-red-hat-business-automation-bundle)
+* [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 Open the page for each extension and click the green install button on each of the extensions to install it.
 
 #### 2.2.2.2. Option 2: Installing directly through VSCode 
 
-It is also possible to install the plugin directly from within VSCode. Navigate to *Preferences → Extensions*.
+It is also possible to install the plugin directly from within VSCode. 
 
-![VSCode Preferences Extensions]({%  image_path/vscode-preferences-extensions.png %}){:width="600px"}
+Click the extensions tab from the left side bar:
+
+![VSCode Preferences Extensions]({%  image_path/vscode-preferences-extensions.png %}){:width="400px"}
 
 In the search box, search for *language support for java*. The Red Hat extension should be on the top of the list. Select the extension and click on the *Install* button. 
 
