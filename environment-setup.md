@@ -1,4 +1,4 @@
-# 1. Environment Setup
+# 2. Environment Setup
 
 In this step you will prepare the environment that you wil use throughout the rest of the modules. You will:
 
@@ -9,7 +9,7 @@ In this step you will prepare the environment that you wil use throughout the re
     -   Install Red Hat Business Automation Bundle in VSCode;
 -   Install GraalVM *(Optional)*;
 
-## 1.1. Creating the base folder for the labs
+## 2.1. Creating the base folder for the labs
 
 In these labs, the commands will consider the directory `~/enablement ` as the base directory to clone GitHub repos or create new projects. 
 
@@ -19,7 +19,7 @@ In these labs, the commands will consider the directory `~/enablement ` as the b
    $ mkdir ~/enablement && cd ~/enablement
    ```
 
-## 1.2. Installing Visual Studio Code IDE
+## 2.2. Installing Visual Studio Code IDE
 
 To install Visual Studio Code, navigate to the [VSCode website](https://code.visualstudio.com/), and click the blue *Download* button to download the IDE for your operating system.
 
@@ -29,7 +29,7 @@ Follow the standard installation instructions.
 
 *TIP: If you do not want to get automatic updates, you can set the Update: Mode setting from default to none . To modify the update mode, go to File &gt; Preferences &gt; Settings (macOS: Code &gt; Preferences &gt; Settings), search for update mode and change the setting to none.*
 
-### 1.2.1. Configuring VSCode to run via Command Line
+### 2.2.1. Configuring VSCode to run via Command Line
 
 This step will allow you to start VSCode using your terminal using the command `code`. 
 
@@ -43,7 +43,7 @@ Type `code` and select the option `Shell Command: install 'code' command in PATH
 
 When you click the option above, VSCode will configure your operational system so that you can run the `code` command in your terminal to open VSCode.
 
-### 1.2.2. Installing VSCode Plugins 
+### 2.2.2. Installing VSCode Plugins 
 
 It is possible to install plugins in VScode in two different ways: 
 
@@ -54,7 +54,7 @@ We need to install two extensions to work the labs: **Language Support for Java 
 
 Choose one of the two alternatives below and install both extensions.
 
-#### 1.2.2.1. Option 1: Installing via VSCode Marketplace
+#### 2.2.2.1. Option 1: Installing via VSCode Marketplace
 
 In VSCode marketplace, you can find the plugins at: 
 
@@ -63,7 +63,7 @@ In VSCode marketplace, you can find the plugins at:
 
 Open the page for each extension and click the green install button on each of the extensions to install it.
 
-#### 1.2.2.2. Option 2: Installing directly through VSCode 
+#### 2.2.2.2. Option 2: Installing directly through VSCode 
 
 It is also possible to install the plugin directly from within VSCode. Navigate to *Preferences → Extensions*.
 
@@ -79,7 +79,7 @@ In the search box, search for *Business Automation Bundle*, and select it. Click
 
 Your IDE is now ready to start working with Kogito applications.
 
-### 1.3. Install GraalVM ( *Optional* )
+### 2.3. Install GraalVM ( *Optional* )
 
 GraalVM is a Java VM and JDK based on HotSpot/OpenJDK, implemented in Java. It supports additional programming languages and execution modes, like ahead-of-time compilation of Java applications for fast startup and low memory footprint.
 
