@@ -7,14 +7,89 @@ Before proceeding, you should review the following tutorial to get a first intro
 
 https://learn-dmn-in-15-minutes.com/
 
-Create the file: `order-approval.dmn`
+> **Warning:** This hands on is not going to give you a step by step guidance on how to craft the DMN, it's structured as a **puzzle** that you have to solve with some hints.
 
-## 4.1. Create the Decision Requirement Graph
+### Challenge description
 
-## 4.2. Create the data types
+> A **Cart** contains multiple items, an item is defined by a _category_ and a _price_. The outcome of the decision is the **Final Price** of the cart. A first discount is evaluated on every item in the cart depending on the category: for the _food_ category, the discount is 5% if the price is more than 19 otherwise 2%; for all other categories the discount is 10% if the price is more than 15. 
 
-## 4.3. Implement the Decision Nodes
+Start creating the file: `discount.dmn` inside the project created in the previous hands on.
 
-## 4.4. Run locally the Decision Service
+## 4.1. Hints
 
-## 4.5. Create a Test Scenario
+### 4.1.1. Create the Data Types
+
+Add:
+
+- The type for the item: `tItem` with `category` and `price`
+- The type for the list of item: `tItemList`
+- The type for the list of numbers 
+
+### 4.1.2. Create the Decision Requirement Graph
+
+- The input is the **Cart** which is a list of item.
+- The output is a decision called **Final Price** which is a number.
+- Create a Business Knowledge Model called **Discount**, which goal is to compute the discount for an item.
+
+### 4.1.3. Implement the Decision Nodes
+
+Open the **Discount** BKM:
+
+- the input parameter is `item` typed `tItem`
+- the output is a `number`
+- the core of the BKM can be implemented as a decision table:
+  
+  1. Input clause `item.category` (string)
+  2. Input clause `item.price` (number)
+  3. Output clause `Discount` (number)
+
+Open the **Final Price** decision node:
+
+- Select `context` as logic type
+- Implement the following entries:
+  - `discounted prices` the list with the discounted prices
+  - `discounted total` the sum of the discounted prices
+
+#### FEEL syntax reminder:
+
+The **for** loop expression iterates over lists of elements or ranges of numbers. The general syntax is:
+
+```
+for i 1 in ic return e
+```
+
+where `ic` stands for iteration context and can be:
+
+- a list
+- a range e.g. `1..10`
+
+The function `sum` return sum of numbers:
+
+```
+list = [1,2,3]
+sum(list) -> 6
+```
+
+## 4.2. Run locally the Decision Service
+
+## 4.3. Create a Test Scenario
+
+## Appendix: a possible solution
+
+> **DON'T READ THIS SECTION** try before to solve the challenge with hints provided above.
+
+It's not important if your solution does not work as expected or it's different from the following: the philosophy of this hands on is that you can learn more from a failed attempt than from a "guided" success.
+
+### Data types
+
+![]({%  image_path/dmn-solution-dt.png %}){:width="600px"}
+
+### Decision Requirement Graph
+
+![]({%  image_path/dmn-solution-drd.png %})
+
+### Decision Nodes
+
+![]({%  image_path/dmn-solution-bkm.png %})
+
+![]({%  image_path/dmn-solution-decision.png %})
