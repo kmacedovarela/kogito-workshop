@@ -65,10 +65,10 @@ where `ic` stands for iteration context and can be:
 
 The function `sum` return sum of numbers:
 
-```
+~~~
 list = [1,2,3]
 sum(list) -> 6
-```
+~~~
 
 ## 4.2. Run locally the Decision Service
 
@@ -77,7 +77,6 @@ sum(list) -> 6
 ## Appendix: a possible solution
 
 > **DON'T READ THIS SECTION** try before to solve the challenge with hints provided above.
-
 It's not important if your solution does not work as expected or it's different from the following: the philosophy of this hands on is that you can learn more from a failed attempt than from a "guided" success.
 
 ### Data types
