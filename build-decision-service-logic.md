@@ -76,40 +76,94 @@ sum(list) -> 6
 
 ## 4.2. Run locally the Decision Service
 
-Start quarkus in dev mode:
+1. **Start** quarkus in dev mode:
 
-~~~
-mvn quarkus:dev
-~~~
+   ~~~
+   mvn quarkus:dev
+   ~~~
 
-Create the file: `src/test/resources/dmn-test.http` with the following content:
+2. **Create** the file: `src/test/resources/dmn-test.http` with the following content:
 
-~~~
-POST http://localhost:8080/discount
-Accept: application/json
-Content-Type: application/json
+   ~~~
+   POST http://localhost:8080/discount
+   Accept: application/json
+   Content-Type: application/json
+   
+   {
+     "Cart": [
+       {
+         "category": "electronics",
+         "price": 80
+       },
+       {
+         "category": "food",
+         "price": 20
+       }
+     ]
+   }
+   ~~~
 
-{
-  "Cart": [
-    {
-      "category": "electronics",
-      "price": 80
-    },
-    {
-      "category": "food",
-      "price": 20
-    }
-  ]
-}
-~~~
+3. **Click** on the `Send request` link to probe the DMN service.
 
-Click on the `Send request` link to probe the DMN service.
-
-In the result page you should spot: `"Final Price": 81.9`
+   In the result page you should spot: `"Final Price": 81.9`
 
 **TIP:** If you haven't installed the _Rest Client_ plug-in, you can probe the DMN service through the _Swagger UI_: `http://localhost:8080/q/swagger-ui/`
 
 ## 4.3. Create a Test Scenario
+
+1. **Add** to the `pom.xml` file the following dependency:
+
+   ~~~
+   <dependency>
+     <groupId>org.kie.kogito</groupId>
+     <artifactId>kogito-scenario-simulation</artifactId>
+     <scope>test</scope>
+   </dependency>
+   ~~~
+
+2. **Create** the Java class `KogitoScenarioJUnitActivatorTest.java` in the folder `src/test/java/testscenario`
+
+3. **Add** the annotation `@RunWith` as in the snippet:
+
+   ~~~
+   import org.junit.runner.RunWith;
+   import org.kogito.scenariosimulation.runner.KogitoJunitActivator;
+ 
+   @RunWith(KogitoJunitActivator.class)
+   public class KogitoScenarioJunitActivatorTest {
+   ~~~
+
+4. **Create** the file `DiscountTS.scesim` in the folder `src/test/resources/`
+
+5. In the dialogue box `Create Test Scenario`
+
+   - **Select** `DMN`, then `discount.dmn` and `Create` button.
+
+   ![]({%  image_path/dmn-ts.png %}){:width="800px"}
+
+   You should get a quite simple table with a column named **GIVEN** and another named **EXPECTED**.
+
+6. In the **GIVEN** column, **double click** on the last cell (there is a place holder text: _Insert value_)
+   
+   - In the pop up window, **select** `Add list value`
+   - **Type** `"food"` in the category field (make sure to type the double quote `"`)
+   - **Type** `20` in the price field
+   - **Click** the confirmation button (check mark)
+   - **Click** the `Save` button
+
+   ![]({%  image_path/dmn-list-value.png %}){:width="600px"}
+
+7. In the **EXPECTED** column, **double click** on the last cell (there is a place holder text: _Insert value_)
+
+   - **Type** `0`
+
+8. From a terminal **launch** the tests: `mvn clean test`
+
+9. You should get a failure message: `KogitoScenarioJunitActivatorTest #1: Failed in "Final Price": The expected value is "0" but the actual one is "19.00" (DiscountTS)`
+
+10. **Change** the test scenario accordingly and run the test again to check the successful execution.
+
+11. Optionally, add other rows to the test scenarios. 
 
 ## Appendix: a possible solution
 
