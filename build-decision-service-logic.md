@@ -11,7 +11,7 @@ https://learn-dmn-in-15-minutes.com/
 
 ### Challenge description
 
-> A **Cart** contains multiple items, an item is defined by a _category_ and a _price_. The outcome of the decision is the **Final Price** of the cart. A first discount is evaluated on every item in the cart depending on the category: for the _food_ category, the discount is 5% if the price is more than 19 otherwise 2%; for all other categories the discount is 10% if the price is more than 15. 
+> A **Cart** contains multiple items, an item is defined by a _category_ and a _price_. The outcome of the decision is the **Final Price** of the cart. A first discount is evaluated on every item in the cart depending on the category: for the _food_ category, the discount is 5% if the price is more than 19 otherwise 2%; for all other categories the discount is 10% if the price is more than 15. Finally, if the overall amount of the cart (after the item discount) is more than 70 then apply an extra discount of 10%. 
 
 Start creating the file: `discount.dmn` inside the project created in the previous hands on.
 
