@@ -15,6 +15,8 @@ https://learn-dmn-in-15-minutes.com/
 
 Start creating the file: `discount.dmn` inside the project created in the previous hands on.
 
+**TIP:** The folder for DMN and BPMN artefacts is: `src/main/resources/`.
+
 ## 4.1. Hints
 
 ### 4.1.1. Create the Data Types
@@ -52,6 +54,8 @@ Open the **Final Price** decision node:
 
 #### FEEL syntax reminder:
 
+A BKM is function, the syntax is: `Discount(item)`
+
 The **for** loop expression iterates over lists of elements or ranges of numbers. The general syntax is:
 
 ```
@@ -71,6 +75,39 @@ sum(list) -> 6
 ~~~
 
 ## 4.2. Run locally the Decision Service
+
+Start quarkus in dev mode:
+
+~~~
+mvn quarkus:dev
+~~~
+
+Create the file: `src/test/resources/dmn-test.http` with the following content:
+
+~~~
+POST http://localhost:8080/discount
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Cart": [
+    {
+      "category": "electronics",
+      "price": 80
+    },
+    {
+      "category": "food",
+      "price": 20
+    }
+  ]
+}
+~~~
+
+Click on the `Send request` link to probe the DMN service.
+
+In the result page you should spot: `"Final Price": 81.9`
+
+**TIP:** If you haven't installed the _Rest Client_ plug-in, you can probe the DMN service through the _Swagger UI_: `http://localhost:8080/q/swagger-ui/`
 
 ## 4.3. Create a Test Scenario
 
