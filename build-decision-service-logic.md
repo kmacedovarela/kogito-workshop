@@ -3,9 +3,12 @@
 In this lab you are going to create a new decision logic from scratch.
 The main goal is to learn how to build a decision logic taking advantage of the powerful DMN notation.
 
-Before proceeding, you should review the following tutorial to get a first introduction to the DMN basis:
+Before proceeding, you should review the following tutorials to get a first introduction to the DMN basis:
 
 https://learn-dmn-in-15-minutes.com/
+
+https://youtu.be/77vwWG17KO4
+
 
 > **Warning:** This hands on is not going to give you a step by step guidance on how to craft the DMN, it's structured as a **puzzle** that you have to solve with some hints.
 
