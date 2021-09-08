@@ -10,6 +10,8 @@ modules:
     name: Build a Decision Service
   build-decision-service-logic:
     name: Build Decision Service Logic
+  run-decision-service:
+    name: Run the Decision Service in Cloud
   run-event-driven-decision-services-1:
     name: Prepare Event Driven Decision Services    
   run-event-driven-decision-services-2:

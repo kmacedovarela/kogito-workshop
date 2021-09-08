@@ -11,6 +11,7 @@ modules:
   - prepare-development
   - build-decision-service
   - build-decision-service-logic
+  - run-decision-service
   - run-event-driven-decision-services-1
   - run-event-driven-decision-services-2
   - build-rules-service
