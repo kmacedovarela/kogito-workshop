@@ -5,9 +5,9 @@ The main goal is to learn how to build a decision logic taking advantage of the 
 
 Before proceeding, you should review the following tutorials to get a first introduction to the DMN basis:
 
-https://learn-dmn-in-15-minutes.com/
+[Learn DMN in 15 minutes](https://learn-dmn-in-15-minutes.com/)
 
-https://youtu.be/77vwWG17KO4
+[DMN Tutorial - Video](https://youtu.be/77vwWG17KO4)
 
 
 > **Warning:** This hands on is not going to give you a step by step guidance on how to craft the DMN, it's structured as a **puzzle** that you have to solve with some hints.
